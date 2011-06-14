@@ -1,0 +1,11 @@
+= DESCRIPTION:
+Weblog decorator
+
+= REQUIREMENTS:
+flume
+jruby
+
+= ATTRIBUTES: 
+
+= USAGE:
+

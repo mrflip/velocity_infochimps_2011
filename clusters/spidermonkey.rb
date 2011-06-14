@@ -2,6 +2,7 @@ ClusterChef.cluster 'spidermonkey' do
   use :defaults
   setup_role_implications
   recipe                "ubuntu"
+  recipe                "big_package::emacs"
   recipe                "hadoop_cluster::system_internals"
   
   cloud do

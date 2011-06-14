@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd <%= @node[:spidmo_api][:dir] %>/current
+
+exec 2>&1
+exec chpst -u <%= @node[:spidmo_api][:user] %>:<%= @node[:spidmo_api][:group] %> rvm 1.9.2 exec ./app/apey_eye_proxy.rb -sv -p <%= @node[:spidmo_api][:port] %> --config <%= @node[:spidmo_api][:dir] %>/current/config/app.rb

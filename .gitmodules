@@ -1,3 +1,6 @@
 [submodule "cluster_chef"]
 	path = cluster_chef
 	url = git@github.com:infochimps/cluster_chef.git
+[submodule "code/spidmo_scraper"]
+	path = code/spidmo_scraper
+	url = https://github.com/mrflip/spidmo_scraper.git

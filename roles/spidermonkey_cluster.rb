@@ -13,4 +13,7 @@ default_attributes({
     :java => {
       :install_flavor => 'sun'
     },
+    :flume => {
+      :cluster_name => 'spidermonkey'
+    }
 })
