@@ -4,3 +4,9 @@
 [submodule "code/spidmo_scraper"]
 	path = code/spidmo_scraper
 	url = https://github.com/mrflip/spidmo_scraper.git
+[submodule "code/spidmo_api"]
+	path = code/spidmo_api
+	url = https://github.com/mrflip/spidmo_api.git
+[submodule "cookbooks/mongodb"]
+	path = cookbooks/mongodb
+	url = https://github.com/papercavalier/mongodb-cookbook.git
