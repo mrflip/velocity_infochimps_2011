@@ -16,6 +16,7 @@ chef_server_url          "https://api.opscode.com/organizations/#{organization}"
 cache_type               'BasicFile'
 cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
 cookbook_path            ["#{cluster_chef_path}/cookbooks", "#{cluster_chef_path}/site-cookbooks", "#{current_dir}/../cookbooks", "#{current_dir}/../site-cookbooks"]
+bootstrap_chef_version   "~> 0.10.0"
 $LOAD_PATH << "#{cluster_chef_path}/lib"
 
 load "#{current_dir}/#{organization}-awskeys.rb"

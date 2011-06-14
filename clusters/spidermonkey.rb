@@ -1,14 +1,16 @@
 ClusterChef.cluster 'spidermonkey' do
   use :defaults
   setup_role_implications
-
+  recipe                "ubuntu"
   recipe                "hadoop_cluster::system_internals"
+  
   cloud do
     backing             "ebs"
     image_name          "maverick"
     user_data           :get_name_from => 'broham'
   end
 
+  # note that nfs_server requires special care on maverick
   facet 'home' do
     instances           1
     
