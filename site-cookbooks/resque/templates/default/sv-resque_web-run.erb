@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export HOME=<%= node[:flying_monkey][:log_dir] %>
+exec 2>&1
+exec chpst -u <%= node[:flying_monkey][:user] %> /usr/bin/resque-web --foreground --no-launch    \
+  --server      thin                                                \
+  --host        localhost                                           \
+  --port        <%= node[:flying_monkey][:scrape_queue_web_port] %> \
+  --app-dir     <%= node[:flying_monkey][:log_dir] %>               \
+  --env         DEVELOPMENT                                         \
+  <%= node[:flying_monkey][:conf_dir] %>/flying_monkey-resque.rb

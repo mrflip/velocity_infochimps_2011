@@ -58,3 +58,35 @@ load balancer:
 
 
 
+
+
+      		
+--------------	Site     API
+kLOC           	1        1
+cp LOC        	1        1
+∑(repo size)² 	1        1
+cpath         	1        1
+cpath out edges	1        3 
+
+
+--------------	Site     API	AcctDB	
+kLOC    	2        2            	
+cp LOC        	2        2
+∑(repo size)² 	4        4     	        
+cpath         	1        1      1
+cpath out edges	2        4      1
+
+Dashboard writes DB keys to AcctDB
+API reads keys from AcctDB
+API reads, writes rate limit info to AcctDB
+Dashboard reads from AcctDB and generates graphs
+
+
+--------------	Site     API
+kLOC           	1        1
+cp LOC        	1        1
+∑(repo size)² 	1        1
+cpath         	1        1
+cpath out edges	1        3 
+                
+

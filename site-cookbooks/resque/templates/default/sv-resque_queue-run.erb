@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd <%= @node[:flying_monkey][:scrape_queue_dbdir] %>
+
+exec 2>&1
+exec chpst -u <%= node[:flying_monkey][:user] %> /usr/local/bin/redis-server \
+  <%= node[:flying_monkey][:conf_dir] %>/flying_monkey-redis.conf
