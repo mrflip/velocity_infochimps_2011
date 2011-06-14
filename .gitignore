@@ -62,3 +62,4 @@ lib/icss
 lib/icss.rb
 
 .vendor
+.chef
