@@ -1,0 +1,3 @@
+[submodule "cluster_chef"]
+	path = cluster_chef
+	url = git@github.com:infochimps/cluster_chef.git

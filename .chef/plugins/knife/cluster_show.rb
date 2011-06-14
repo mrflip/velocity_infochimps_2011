@@ -1,0 +1,1 @@
+../../../cluster_chef/lib/cluster_chef/knife/cluster_show.rb
