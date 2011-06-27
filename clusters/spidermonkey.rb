@@ -12,16 +12,8 @@ ClusterChef.cluster 'spidermonkey' do
     user_data           :get_name_from => 'broham'
   end
 
-  # note that nfs_server requires special care on maverick
-  facet 'home' do
-    instances           1
-    
-    cloud.flavor        "m1.small"
-    role                "nfs_server"
-  end
-
   facet 'webnode' do
-    instances           1
+    instances           2
 
     cloud.flavor        "t1.micro"
     role                "nfs_client"
@@ -45,6 +37,14 @@ ClusterChef.cluster 'spidermonkey' do
     role                "nfs_client"
     # role              "spidmo_scraper"
     role                "flume_slave"
+  end
+
+  # note that nfs_server requires special care on maverick
+  facet 'home' do
+    instances           1
+    
+    cloud.flavor        "m1.small"
+    role                "nfs_server"
   end
 
   chef_attributes({
