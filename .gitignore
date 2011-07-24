@@ -63,3 +63,7 @@ lib/icss.rb
 
 .vendor
 .chef
+
+.vendor
+.bundle
+Gemfile.lock
